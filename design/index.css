@@ -1057,6 +1057,7 @@
     -webkit-box-sizing: border-box;
             box-sizing: border-box;
     border: 2px solid rgb(40, 81, 147);
+    cursor: pointer;
     border-radius: 5px;
     background: rgb(251, 251, 251);
     padding: 14px;
@@ -1085,11 +1086,11 @@
     -o-transition: all 0.5s;
     transition: all 0.5s;
   }
-  .contact__file button:hover {
-    background: rgb(29, 66, 129);
+  .contact__form form .contact__file button:hover {
+    background: rgb(22, 57, 118);
   }
-  .contact__file button:active {
-    background: rgb(44, 75, 130);
+  .contact__form form .contact__file button:active {
+    background: rgb(49, 79, 133);
   }
   .contact__form form #file {
     display: none;
@@ -1177,6 +1178,16 @@
     line-height: 21px;
     letter-spacing: 0%;
     text-align: left;
+  }
+  .data2 div img{
+    cursor: pointer;
+    transition: all 0.5s;
+  }
+  .data2 div img:hover{
+    transform: scale(1.1);
+  }
+  .data2 div img:active{
+    transform: scale(1.02);
   }
   .data3 a {
     cursor: pointer;
