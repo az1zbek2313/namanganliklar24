@@ -70,32 +70,30 @@
         <nav class="header__nav">
           <!-- responsive navbar  -->
           <select name="news" id="news">
-            <option value="Узбекистана">
-              <a href="./pages/list.html">Узбекистана</a>
+            <option value="./pages/list.html?category=Узбекистана">
+              Узбекистана
             </option>
-            <option value="Мир"><a href="./pages/list.html">Мир</a></option>
-            <option value="Экономика">
-              <a href="./pages/list.html">Экономика</a>
+            <option value="./pages/list.html?category=Мир">Мир</option>
+            <option value="./pages/list.html?category=Экономика">
+              Экономика
             </option>
-            <option value="Политика">
-              <a href="./pages/list.html">Политика</a>
+            <option value="./pages/list.html?category=Политика">
+              Политика
             </option>
-            <option value="Общество">
-              <a href="./pages/list.html">Общество</a>
+            <option value="./pages/list.html?category=Общество">
+              Общество
             </option>
-            <option value="Технологии">
-              <a href="./pages/list.html">Технологии</a>
+            <option value="./pages/list.html?category=Технологии">
+              Технологии
             </option>
-            <option value="Спорт"><a href="./pages/list.html">Спорт</a></option>
-            <option value="Культура">
-              <a href="./pages/list.html">Культура</a>
+            <option value="./pages/list.html?category=Спорт">Спорт</option>
+            <option value="./pages/list.html?category=Культура">
+              Культура
             </option>
-            <option value="Происшествия">
-              <a href="./pages/list.html">Происшествия</a>
+            <option value="./pages/list.html?category=Происшествия">
+              Происшествия
             </option>
-            <option value="Туризм">
-              <a href="./pages/list.html">Туризм</a>
-            </option>
+            <option value="./pages/list.html?category=Туризм">Туризм</option>
           </select>
           <!-- navbar list  -->
           <ul id="navbarList" class="flex-center">
@@ -507,13 +505,19 @@
       </p>
       <a href="https://t.me/namanganliklar">
         <button class="buttons__follow flex-center">
-            <img src="./images/cib_telegram@2x.svg" alt="telegram icon" />
-            <span>Подписатся</span>
-          </button>
+          <img src="./images/cib_telegram@2x.svg" alt="telegram icon" />
+          <span>Подписатся</span>
+        </button>
       </a>
     </div>
 
     <script>
+      document.getElementById("news").addEventListener("change", function () {
+        var selectedValue = this.value;
+        if (selectedValue) {
+          window.location.href = selectedValue;
+        }
+      });
 
       remove.addEventListener("click", () => {
         body.className = "";
@@ -529,7 +533,6 @@
         body.className = "body";
         modal.style.display = "block";
       }, 10000);
-
     </script>
   </body>
 </html>
